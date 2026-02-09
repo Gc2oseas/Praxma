@@ -1,0 +1,62 @@
+:root {
+    --bg-paper: #f4f1ea;
+    --text-main: #1a1a1a;
+}
+
+#praxma-app-root {
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    background: var(--bg-paper);
+}
+
+.app-header {
+    background: var(--bg-paper);
+    padding: 30px 0;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.post-card {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 2px;
+    background: #000;
+}
+
+.post-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+
+.post-card-info {
+    position: absolute; bottom: 0; padding: 40px 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: #fff; width: 100%; box-sizing: border-box;
+}
+
+.post-card h2 { font-size: 24px; margin: 0; line-height: 1.1; }
+
+#reader-view {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: var(--bg-paper); z-index: 20000; display: none; overflow-y: auto;
+}
+
+.reader-header { padding: 20px; font-weight: bold; color: #b30000; cursor: pointer; border-bottom: 1px solid rgba(0,0,0,0.05); background: var(--bg-paper); position: sticky; top: 0; }
+
+.reader-body {
+    max-width: 600px; margin: 0 auto; padding: 40px 20px 120px;
+    line-height: 1.8; font-size: 20px; color: var(--text-main);
+}
+
+.reader-body img { max-width: 100%; height: auto; margin: 20px 0; }
+
+#app-shell-menu {
+    position: fixed; bottom: 0; width: 100%; height: 60px;
+    background: #111; display: flex; justify-content: space-around;
+    align-items: center; z-index: 10001; padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item { color: #555; text-decoration: none; font-size: 10px; display: flex; flex-direction: column; align-items: center; }
+.nav-item.active { color: #fff; }
+
